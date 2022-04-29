@@ -1,5 +1,5 @@
 import "./App.css";
-import Card from "./components/Card";
+import Product from "./components/Product";
 import { Grid, Container } from "@mui/material";
 import React from "react";
 
@@ -7,11 +7,11 @@ function App() {
   return (
     <React.Fragment>
       <Container maxWidth='lg'>
-        <Grid container spacing={3}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <Grid container spacing={1}>
+          <Product />
+          <Product />
+          <Product />
+          <Product />
         </Grid>
       </Container>
     </React.Fragment>
