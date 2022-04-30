@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 
 const Product = (props) => {
-  const [qty, setQty] = useState(null);
+  const [qty, setQty] = useState(0);
 
   const handleAdd = () => {
     console.log(qty);
@@ -74,7 +74,7 @@ const Product = (props) => {
         <Button
           variant='contained'
           color='error'
-          sx={{ marginRight: 1 }}
+          sx={{ marginRight: 1, fontSize: 35, padding: 0 }}
           onClick={handleSub}
         >
           {' '}
@@ -85,11 +85,17 @@ const Product = (props) => {
           variant='outlined'
           size='small'
           type='number'
-          label='Enter Quantity'
+          // eslint-disable-next-line no-const-assign
+          label='Enter quantity'
           value={qty}
           onChange={(e) => handleChange(e)}
         />
-        <Button variant='contained' color='success' onClick={handleAdd}>
+        <Button
+          variant='contained'
+          color='success'
+          sx={{ marginRight: 1, fontSize: 35, padding: 0 }}
+          onClick={handleAdd}
+        >
           {' '}
           +{' '}
         </Button>
