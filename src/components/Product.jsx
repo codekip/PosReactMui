@@ -74,7 +74,7 @@ const Product = (props) => {
         <Button
           variant='contained'
           color='error'
-          sx={{ marginRight: 1, fontSize: 35, padding: 0 }}
+          sx={{ marginRight: 1, fontSize: '2.1em', padding: 0 }}
           onClick={handleSub}
         >
           {' '}
@@ -93,7 +93,7 @@ const Product = (props) => {
         <Button
           variant='contained'
           color='success'
-          sx={{ marginRight: 1, fontSize: 35, padding: 0 }}
+          sx={{ marginRight: 1, fontSize: '2.1em', padding: 0 }}
           onClick={handleAdd}
         >
           {' '}
