@@ -8,10 +8,10 @@ function App() {
     <React.Fragment>
       <Container maxWidth='lg'>
         <Grid container spacing={1}>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Product productcode ='PS01254A' available={2} />
+          <Product productcode ='PS25128A' available={3} />
+          <Product productcode ='PS35415A' available={1} />
+          <Product productcode ='PS87865A' available={7} />
         </Grid>
       </Container>
     </React.Fragment>
