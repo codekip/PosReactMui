@@ -10,3 +10,11 @@
 body {
   font-family: Roboto, sans-serif;
 }
+
+.acard {
+  margin: 10px;
+}
+
+.cardactions{
+  /* background-color: aquamarine; */
+}

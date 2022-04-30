@@ -3,16 +3,21 @@ import {
   Button,
   Card,
   CardContent,
+  Grid,
   Typography,
   CardMedia,
   CardActions,
+  CardActionArea,
   TextField,
 } from "@mui/material";
 // import {  } from "@mui/material";
 
 const Product = () => {
+
+
   return (
-    <Card sx={{ maxWidth: 320 }}>
+    <Card className='acard' sx={{ maxWidth: 320 }}>
+     <CardActionArea>
       <CardMedia
         component='img'
         height='194'
@@ -20,17 +25,23 @@ const Product = () => {
         alt='A product'
       />
       <CardContent>
+        <Grid container spacing={0}>
         <Typography variant='h5' color='text.secondary'>
           PS01223A
         </Typography>
+             <Typography variant='h6' color='text.secondary'>
+          PS01223A
+        </Typography>
+        </Grid>
         <Typography variant='h8' color='text.secondary'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button variant='contained'>-</Button>
-        <TextField id='outlined-basic' label='' variant='outlined' />
-        <Button variant='contained'>+</Button>
+      </CardActionArea>
+      <CardActions className='cardactions'>
+        <Button variant='contained' color='error' sx={{ marginRight:1}}> - </Button>
+        <TextField id='outlined-basic' variant='outlined' size='small' type='number' label='Enter Quantity'/>
+        <Button variant='contained' color='success'>+</Button>
       </CardActions>
     </Card>
   );
