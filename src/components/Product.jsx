@@ -11,15 +11,15 @@ import {
   TextField,
 } from '@mui/material';
 
-const Product = (props) => {
+const Product = ( { productcode, description, available, image, id }) => {
   const [qty, setQty] = useState(0);
 
   const handleAdd = () => {
     console.log(qty);
-    if (qty < props.available) {
+    if (qty < available) {
       setQty(qty + 1);
     } else {
-      setQty(props.available);
+      setQty(available);
     }
   };
   const handleSub = () => {
@@ -31,8 +31,8 @@ const Product = (props) => {
   };
 
   const handleChange = (event) => {
-    if (event.target.value > props.available) {
-      setQty(props.available);
+    if (event.target.value > available) {
+      setQty(available);
     } else if (event.target.value <= 0) {
       setQty("");
     } else {
@@ -46,18 +46,18 @@ const Product = (props) => {
         <CardMedia
           component='img'
           height='194'
-          image='https://images.unsplash.com/photo-1650369335952-abb47b6a81e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80'
+          image={image}
           alt='A product'
           class='product-image'
         />
         <CardContent>
           <Grid container spacing={0}>
             <Typography variant='h5' color='text.secondary'>
-              {props.productcode}
+              {productcode}
             </Typography>
           </Grid>
           <Typography variant='h8' color='text.secondary'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+           {description}
           </Typography>
         </CardContent>
         <Typography
@@ -67,7 +67,7 @@ const Product = (props) => {
           align='right'
           sx={{ marginRight: 10 }}
         >
-          Available quantity: {props.available}
+          Available quantity: {available}
         </Typography>
       </CardActionArea>
       <CardActions className='cardactions'>
